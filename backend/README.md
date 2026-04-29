@@ -13,23 +13,22 @@ $ npm install
 ```bash
 # watch mode
 $ npm run start:dev
+Runs on: http://localhost:3000
 ```
-# Runs on: http://localhost:3000
-
 
 ## API Endpoints
 
 
 ### GET Requests
 
-GET /menu
-GET /student
-GET /parent
+GET /menu  
+GET /student  
+GET /parent  
 
 ### Create Order
 
 POST /orders
-
+```bash
 Request:
 {
   "studentId": 1,
@@ -38,12 +37,15 @@ Request:
   ]
 }
 
+
 Response:
 {
   "success": true,
   "order": {},
   "balance": 30
 }
+
+```
 
 ## Business Rules
 
