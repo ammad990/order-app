@@ -1,10 +1,11 @@
-import Order from './Order';
+import { OrderProvider } from "./store/orderContext";
+import Order from "./components/Order";
 
 function App() {
   return (
-    <div>
+    <OrderProvider>
       <Order />
-    </div>
+    </OrderProvider>
   );
 }
 

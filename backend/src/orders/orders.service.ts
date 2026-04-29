@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { store } from '../data/store';
 import { AppException } from '../common/error';
-import { HttpStatus } from '@nestjs/common';
 
 @Injectable()
 export class OrdersService {
@@ -48,7 +47,6 @@ export class OrdersService {
         throw new AppException(
           'ITEM_UNAVAILABLE',
           `${menu.name} unavailable`,
-          HttpStatus.UNPROCESSABLE_ENTITY
         );
       }
 
@@ -56,7 +54,6 @@ export class OrdersService {
         throw new AppException(
           'ALLERGEN',
           `${menu.name} has allergens`,
-          HttpStatus.UNPROCESSABLE_ENTITY
         );
       }
 
@@ -71,7 +68,6 @@ export class OrdersService {
       throw new AppException(
         'INSUFFICIENT_BALANCE',
         'Insufficient wallet balance',
-        HttpStatus.UNPROCESSABLE_ENTITY
       );
     }
   }
